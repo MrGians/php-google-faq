@@ -79,7 +79,10 @@ $faqs = [
     <!-- Top Header -->
     <div id="top-header" class="p-3">
       <!-- Page Title -->
-      <h1 class="h4">Privacy e termini</h1>
+      <div class="d-flex">
+        <img src="https://www.gstatic.com/images/branding/googlelogo/svg/googlelogo_clr_74x24px.svg" alt="Google logo">
+        <h1 class="h4">Privacy e termini</h1>
+      </div>
       <!-- Btn User Actions -->
       <div class="btn-header">
         <a href="#">G</a>
