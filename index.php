@@ -1,6 +1,6 @@
 <?php 
 
-$faq = [
+$faqs = [
   [
     'question' => 'Come state implementando la recente decisione della Corte di giustizia dell\'Unione europea (CGUE) relativa al diritto all\'oblio?',
     'answers' => ['La recente <a href="#">decisione della Corte di giustizia dell\'Unione europea</a> ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.', 
@@ -74,13 +74,40 @@ $faq = [
   <header></header>
   <!-- Main -->
   <main>
-    <section id="faq">
-      <!-- Single Question -->
-      <div>
-        <h2></h2>
-        <p></p>
+    <div class="container">
+
+      <section id="faq">
+        <!-- Single FAQ -->
+        <?php foreach ($faqs as $faq) : ?>
+          <div>
+            <!-- FAQ Question -->
+            <h3><?php echo $faq['question'] ?></h3>
+            <!-- FAQ Answers -->
+        <?php foreach ($faq['answers'] as $answer) : ?>
+          <!-- If $answer isn't an Array print the String -->
+          <?php if(!is_array($answer)) : ?>
+        <p><?php echo $answer ?></p>
+        <!-- Else do one more FOREACH -->
+        <?php else : ?>
+          <ol>
+          <?php foreach ($answer as $item) : ?>
+            <?php if(!is_array($item)) : ?>
+            <li><?php echo $item ?></li>
+            <?php else : ?>
+                <ol type="a">
+                  <?php foreach ($item as $sub_item) : ?>
+                    <li><?php echo $sub_item ?></li>
+                  <?php endforeach; ?>
+                  </ol>
+            <?php endif; ?>
+            <?php endforeach; ?>
+          </ol>
+        <?php endif; ?>
+      <?php endforeach; ?>
       </div>
+      <?php endforeach; ?>
     </section>
+  </div>
   </main>
   <!-- Footer -->
   <footer></footer>
