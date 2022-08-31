@@ -77,17 +77,17 @@ $faqs = [
   <!-- Header -->
   <header>
     <!-- Top Header -->
-    <div id="top-header">
+    <div id="top-header" class="p-3">
       <!-- Page Title -->
-      <h1 class="h3">Privacy e termini</h1>
+      <h1 class="h4">Privacy e termini</h1>
       <!-- Btn User Actions -->
       <div class="btn-header">
-        <span>G</span>
+        <a href="#">G</a>
       </div>
     </div>
     <!-- Navigation | Bottom Header -->
     <nav id="navbar">
-      <ul>
+      <ul class="ps-3 mb-0">
         <li><a href="#">Introduzione</a></li>
         <li><a href="#">Norme sulla privacy</a></li>
         <li><a href="#">Termini di servizio</a></li>
@@ -95,9 +95,10 @@ $faqs = [
         <li class="active"><a href="#">Domande Frequenti</a></li>
       </ul>
     </nav>
+    <hr class="my-0"/>
   </header>
   <!-- Main -->
-  <main>
+  <main class="mx-auto">
     <div class="container">
 
       <section id="faq">
