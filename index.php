@@ -83,27 +83,27 @@ $faqs = [
       <section id="faq">
         <!-- Single FAQ -->
         <?php foreach ($faqs as $faq) : ?>
-          <div>
+          <div class="py-3">
             <!-- FAQ Question -->
-            <h3><?php echo $faq['question'] ?></h3>
+            <h4><?php echo $faq['question'] ?></h4>
 
             <!-- FAQ Answers -->
             <?php foreach ($faq['answers'] as $answer) : ?>
             <!-- If $answer is String -->
             <?php if(!is_array($answer)) : ?>
-            <p><?php echo $answer ?></p>
+            <p class="py-2"><?php echo $answer ?></p>
             <!-- If $answer is a List items -->
             <?php else : ?>
             <ol>
               <?php foreach ($answer as $list) : ?>
                 <!-- Single List Item -->
-              <li><?php echo $list['item'] ?></li>
+              <li class="py-2"><?php echo $list['item'] ?></li>
               <!-- If the list item contains a list of Sub-Items -->
             <?php if(isset($list['sub-items'])) : ?>
               <ol type="a">
               <?php foreach ($list['sub-items'] as $sub_item) : ?>
                 <!-- Single Sub List Item -->
-                <li><?php echo $sub_item ?></li>
+                <li class="py-2"><?php echo $sub_item ?></li>
               <?php endforeach; ?>
               </ol>
             <?php endif; ?>   
