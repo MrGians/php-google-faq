@@ -138,6 +138,27 @@ $faqs = [
     </div>
   </main>
   <!-- Footer -->
-  <footer></footer>
+  <footer>
+    <section id="footer" class="mx-auto py-3">
+        <div class="container">
+        <!-- Useful Links -->
+        <div class="d-flex justify-content-between align-items-center">
+          <ul class="ps-0 mb-0">
+            <li><a href="#">Google</a></li>
+            <li><a href="#">Tutto su Google</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Termini</a></li>
+          </ul>
+          <!-- Change Language Input -->
+          <select name="lang">
+            <option value="it" selected >Italiano</option>
+            <option value="en">Inglese</option>
+            <option value="es">Spagnolo</option>
+            <option value="fr">Francese</option>
+          </select>
+        </div>
+      </div>
+      </section>
+  </footer>
 </body>
 </html>
