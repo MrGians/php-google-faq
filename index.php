@@ -86,32 +86,35 @@ $faqs = [
           <div>
             <!-- FAQ Question -->
             <h3><?php echo $faq['question'] ?></h3>
+
             <!-- FAQ Answers -->
-        <?php foreach ($faq['answers'] as $answer) : ?>
-          <!-- If $answer isn't an Array print the String -->
-          <?php if(!is_array($answer)) : ?>
-        <p><?php echo $answer ?></p>
-        <!-- Else do one more FOREACH -->
-        <?php else : ?>
-          <ol>
-          <?php foreach ($answer as $item) : ?>
-            <?php if(!is_array($item)) : ?>
-            <li><?php echo $item ?></li>
+            <?php foreach ($faq['answers'] as $answer) : ?>
+            <!-- If $answer is String -->
+            <?php if(!is_array($answer)) : ?>
+            <p><?php echo $answer ?></p>
+            <!-- If $answer is a List items -->
             <?php else : ?>
-                <ol type="a">
-                  <?php foreach ($item as $sub_item) : ?>
-                    <li><?php echo $sub_item ?></li>
-                  <?php endforeach; ?>
-                  </ol>
+            <ol>
+              <?php foreach ($answer as $list) : ?>
+                <!-- Single List Item -->
+              <li><?php echo $list['item'] ?></li>
+              <!-- If the list item contains a list of Sub-Items -->
+            <?php if(isset($list['sub-items'])) : ?>
+              <ol type="a">
+              <?php foreach ($list['sub-items'] as $sub_item) : ?>
+                <!-- Single Sub List Item -->
+                <li><?php echo $sub_item ?></li>
+              <?php endforeach; ?>
+              </ol>
+            <?php endif; ?>   
+            <?php endforeach; ?>
+            </ol>
             <?php endif; ?>
             <?php endforeach; ?>
-          </ol>
-        <?php endif; ?>
-      <?php endforeach; ?>
-      </div>
-      <?php endforeach; ?>
-    </section>
-  </div>
+          </div>
+        <?php endforeach; ?>
+      </section>
+    </div>
   </main>
   <!-- Footer -->
   <footer></footer>
