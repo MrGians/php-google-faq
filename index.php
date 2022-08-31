@@ -75,7 +75,27 @@ $faqs = [
 </head>
 <body>
   <!-- Header -->
-  <header></header>
+  <header>
+    <!-- Top Header -->
+    <div id="top-header">
+      <!-- Page Title -->
+      <h1 class="h3">Privacy e termini</h1>
+      <!-- Btn User Actions -->
+      <div class="btn-header">
+        <span>G</span>
+      </div>
+    </div>
+    <!-- Navigation | Bottom Header -->
+    <nav id="navbar">
+      <ul>
+        <li><a href="#">Introduzione</a></li>
+        <li><a href="#">Norme sulla privacy</a></li>
+        <li><a href="#">Termini di servizio</a></li>
+        <li><a href="#">Tecnologie</a></li>
+        <li class="active"><a href="#">Domande Frequenti</a></li>
+      </ul>
+    </nav>
+  </header>
   <!-- Main -->
   <main>
     <div class="container">
